@@ -1,0 +1,33 @@
+generated: '2026-08-26'
+method: probed
+source: live GET of /.well-known/* on every host in apis.yml
+note: >-
+  Every /.well-known/ path probed on the company's live marketing host returned a real HTTP 404
+  with an 88-byte "Invalid .well-known request" body from Webflow — a genuine negative, not a
+  catch-all 200. No WellKnown or SecurityTxt pointer is emitted, because nothing was served.
+  The legacy host www.neyesystems.com is a parked page that answers 200 with an identical
+  ~27KB body for every path, so it was excluded as an untrustworthy soft-200 surface.
+hit_count: 0
+hosts:
+- host: https://www.neye.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+soft_404_control:
+  host: https://www.neyesystems.com
+  path: /zzz-does-not-exist-9182
+  status: 200
+  bytes: 27419
+  verdict: parked-catch-all

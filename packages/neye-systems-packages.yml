@@ -1,0 +1,24 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  npm registry search, PyPI, GitHub org + repository search, and the company's own site
+  (www.neye.ai, 8 pages incl. sitemap.xml) — 2026-08-26
+packages: []
+package_count: 0
+note: >-
+  No first-party client library exists on any public registry. npm search for "neye" returns
+  only unrelated third-party packages; pypi.org/pypi/neye/json returns 404; no GitHub
+  organization is registered at neye-systems, neye-ai or neyeai (all 404 from the GitHub API)
+  and a repository search for the company's product returns zero results. nEye is a
+  semiconductor and optical hardware company with no software distribution surface, so this
+  is an expected absence rather than a gap. No SDKs pointer is emitted.
+registries_checked:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=neye
+  result: no first-party package
+- registry: pypi
+  query: https://pypi.org/pypi/neye/json
+  status: 404
+- registry: github
+  query: https://api.github.com/orgs/neye-systems
+  status: 404
