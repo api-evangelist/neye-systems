@@ -13,6 +13,17 @@ description: >-
   optical hardware company: as of this profile it publishes no developer program, API, SDK,
   webhook surface or machine-readable contract of any kind, and its entire public surface is a
   seven-page marketing site.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/68e49740aa56011f2ac8b755/68ea44cf079b8a74058011bf_neye.png
 url: https://raw.githubusercontent.com/api-evangelist/neye-systems/refs/heads/main/apis.yml
 x-type: company
